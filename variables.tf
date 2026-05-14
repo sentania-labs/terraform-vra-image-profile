@@ -1,17 +1,22 @@
 variable "region" {
-  type = string
+  type        = string
+  description = "The region ID to associate the image profile with"
 }
 
 variable "image_profile_name" {
-  type = string
+  type        = string
+  description = "The name of the image profile"
 }
+
 variable "image_description" {
-  type    = string
-  default = "Created by TF - Do not edit!"
+  type        = string
+  default     = "Created by TF - Do not edit!"
+  description = "A description for the image profile"
 }
 
 variable "cloud_account_id" {
-  type = string
+  type        = string
+  description = "The ID of the cloud account to look up images from"
 }
 variable "image_mappings" {
   type = list(object({
